@@ -1,0 +1,32 @@
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  a.thick{
+    font-weight: bold;
+  }
+  .parent{
+
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    column-gap: 5px;
+  }

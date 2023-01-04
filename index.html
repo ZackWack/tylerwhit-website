@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: url('Tyler.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+</style>
+<link rel="stylesheet" href="index.css">
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+<h1 style="text-align:center">Late Merry Christmas Tyler</h1>
+<div style="text-align: center;">
+
+<!--        React        -->
+    <div id="mytru"></div>
+
+    <script type="text/babel">
+      const {useState, useEffect} = React;
+      function FavoriteColor() {
+        const [count, setCount] = useState(0);
+        const [img, setImg] =useState("A.png");
+        const [imgg, setImgg] =useState("me1.jpg");
+        const [imggg, setImggg] =useState("flip1.jpg");
+        useEffect(() => {
+          if(count > 3){
+            setCount(3);
+          }
+          if(count < 0){
+            setCount(0);
+          }
+          if(count == 0){
+            setImg("A.png");
+            setImggg("flip1.jpg");
+            setImgg("me1.jpg");
+          }else if(count == 1){
+            setImg("B.png");
+            setImggg("flip3.jpg");
+            setImgg("me3.jpg");
+          }else if(count == 2){
+            setImg("C.png");
+            setImggg("flip4.jpg");
+            setImgg("me4.jpg");
+          }else if(count == 3){
+            setImg("D.png");
+            setImggg("flip5.jpg");
+            setImgg("me5.jpg");
+          }
+        }, [count]);
+
+        return (
+          <div>
+            <div class="parent">
+            <div>
+            <img src={imggg} width="100" height="120"/>
+            </div>
+          <div>
+            <img src={img} alt="Cat Photo" class="center"/>
+          </div>
+          <div>
+          <img src={imgg} width="100" height="120"/>  
+          </div>
+          </div>
+          <div>
+            <button onClick={() => setCount((c) => c - 1)}><i class="arrow left"></i></button>
+            <button onClick={() => setCount((c) => c + 1)}><i class="arrow right"></i></button>
+         </div>
+         </div>
+        );
+      }
+      const comp = ReactDOM.createRoot(document.getElementById('mytru'));
+      comp.render(<FavoriteColor />);
+     </script>
+<br>
+<br>
+<a class="thick">Merry Christmas My Man</a>
+
+</div>
+</body>
+</html>
+
+<!-- //     class A extends React.Component{
+        
+  //      constructor(props){
+  //        super(props);
+  //        this.state = {
+  //          color: "red",
+  //          material: "hard"
+  //       };
+  //       }
+  //       changeColor = () => {
+  //   this.setState({color: "blue"});
+  // }
+
+  //       render(){
+  //         return (
+  //           <div>
+  //            <h1>Tiger </h1>
+  //            <h2>The tiger is {this.state.color} and has {this.state.material} leather exterior</h2>
+  //            <button type="button" onClick={this.changeColor}>Change Color</button>
+  //            </div>
+  //           );
+
+  //       }
+  //     }
+
+    //   class B extends React.Component{
+    //     constructor(props){
+    //       super(props);
+    //       this.state={};
+    //     }
+
+    //     render(){
+    //       return (
+    //         <h1>blah {this.props.stuff}</h1>
+    //       );
+    //     }
+    //   }
+
+      
+
+    //   const comp = ReactDOM.createRoot(document.getElementById('mydiv'));
+    //   comp.render(<A/>); -->
+    
+    <!-- // const incrementCount = () => {
+      //   // Update state with incremented value
+      //   setCount(count + 1);
+      //   if(count == 0){
+      //     setImg("Cat.jpg");
+      //   }
+      //   if(count == 1){
+      //     setImg("Doggo.png"); 
+      //   }
+      //   if(count ==2){
+      //     setImg("download.jpg");
+      //   }
+      //    console.log(count);
+     
+      // };
+      // const decrementCount = () => {
+      //   setCount(count - 1);
+      //   if(count == 0){
+      //     setImg("Cat.jpg");
+      //   }
+      //   if(count == 1){
+      //     setImg("Doggo.png"); 
+      //   }
+      //   if(count ==2){
+      //     setImg("download.jpg");
+      //   }
+      //   console.log(count);
+      // } -->
